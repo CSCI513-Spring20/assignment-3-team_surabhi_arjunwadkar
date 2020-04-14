@@ -23,6 +23,7 @@ public class ThreadPool
 		  }
 	  }
 	
+	  // task execute method
 	  public void execute(Task task) {
 		  synchronized (queue) {
 			  queue.add(task);
@@ -49,6 +50,7 @@ public class ThreadPool
 		  }
 	  }
 	
+	  // shutdown method
 	  public void shutdown() {
 		  this.isShutdown = true;
 	  }
@@ -58,7 +60,7 @@ public class ThreadPool
 			    super(name);
 		  }
 		  @Override
-		  public void run() {
+		  public void run() {		// run
 			  Task task;
 			  while (true) {
 				  synchronized (queue) {

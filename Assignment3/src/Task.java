@@ -3,11 +3,11 @@ public abstract class Task implements Runnable {
 	boolean isFinished;
 
 	public Task(String task_name) {
-		this.task_name = task_name;
+		this.task_name = task_name;		// task name
 		this.isFinished = false;
 	}
 
-	public String getName() {
+	public String getName() {		// get name method
 		return task_name;
 	}
   
